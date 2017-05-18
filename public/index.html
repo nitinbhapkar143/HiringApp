@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html ng-app="applicantApp">
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+    <title>Apply for a Job</title>
+    <meta name="description" content="applicant database">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- JS libraries -->
+
+    <script src="./bower_components/angular/angular.js"></script>   
+    <script src="./bower_components/angular-route/angular-route.js"></script>
+    <script src="./bower_components/filepicker-js/filepicker.js"></script>
+    <script src="./bower_components/angular-filepicker/dist/angular_filepicker.js"></script>
+    
+    <!-- Angular files -->
+    <script src="./app.js"></script>    
+
+    <script src="./controllers/addApplicantController.js"></script>
+    <script src="./controllers/viewApplicantController.js"></script>
+    <script src="./controllers/singleApplicantController.js"></script>
+    <script src="./factory/commonFactory.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/addapplicant">Hire.me</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li role="presentation"><a href="/addapplicant">Apply for Job</a></li>
+                <li role="presentation"><a href="/viewApplications">View Applicantions</a></li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Here is where the partials will be displayed -->
+    <div ng-view></div>
+</body>
+</html>

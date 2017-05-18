@@ -1,0 +1,26 @@
+<div class="container" ng-controller="viewApplicantController">
+	<h1 class="center-text">Applications for the Job</h1>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Mobile</th>
+				<th>Status</th>
+				<th>Application Date</th>
+				<th>Resume</th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="applicant in applicants.data">
+			<td>{{applicant.firstname + ' ' + applicant.lastname}}</td>
+			<td>{{applicant.email}}</td>
+			<td>{{applicant.mobile}}</td>
+			<td>{{applicant.status}}</td>
+			<td>{{applicant.createdAt|limitTo:10}}</td>
+			<td><a href="/singleApplicationView" class="btn btn-primary" ng-click="setActiveAppl.setCurrentApp(applicant._id)"><span class="glyphicon glyphicon-file"></span></a></td> 
+		</tr>
+		</tbody>
+	</table>
+</div>
+
